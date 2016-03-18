@@ -1,12 +1,15 @@
 apiKey = require("./../.env").apiKey;
 
 exports.getRepos = function(user, page){
-  $.get('https://api.github.com/users/' + user + '/repos?page=' + page + '&per_page=20' + '&access_token=' + apiKey).then(function(response){
-    var name;
-    var description;
+  $.get('https://api.github.com/users/' + user + '/repos?page=' + page + '&per_page=20' + '&access_token=' + apiKey + ';rel=next').then(function(response){
+    $("#gitRepos").empty();
     for(var i = 0; i < response.length; i++)
     {
+
+      var name;
+      var description;
       name = response[i].name;
+            console.log(name);
       if (response[i].description != "") {
       description = response[i].description
       } else {
