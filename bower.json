@@ -1,12 +1,12 @@
 {
-  "name": "your-proj",
+  "name": "github-finder",
   "description": "",
-  "main": "index.js",
+  "main": "index.html",
   "authors": [
-    "Your Name <youremail@gmail.com>"
+    "Torrence Stratton"
   ],
   "license": "ISC",
-  "homepage": "https://github.com/you/yourproj",
+  "homepage": "https://github.com/mostfamiliar/github-finder-js",
   "moduleType": [],
   "ignore": [
     "**/.*",

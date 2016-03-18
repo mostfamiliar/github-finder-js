@@ -1,5 +1,5 @@
 {
-  "name": "YOUR PROJ",
+  "name": "github-finder",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -25,11 +25,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/YOU/ YOUR PROJ.git"
+    "url": "git+https://github.com/mostfamiliar/github-finder-js.git"
   },
   "bugs": {
-    "url": "https://github.com/YOU/YOUR PROJ/issues"
+    "url": "https://github.com/mostfamiliar/github-finder-js/issues"
   },
-  "homepage": "https://github.com/YOU/YOUR PROJ#readme",
+  "homepage": "https://github.com/mostfamiliar/github-finder-js#readme",
   "description": ""
 }
