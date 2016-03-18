@@ -1,7 +1,7 @@
 apiKey = require("./../.env").apiKey;
 
-exports.getRepos = function(user){
-  $.get('https://api.github.com/users/' + user + '/repos' + '?access_token=' + apiKey).then(function(response){
+exports.getRepos = function(user, page){
+  $.get('https://api.github.com/users/' + user + '/repos?page=' + page + '&per_page=20' + '&access_token=' + apiKey).then(function(response){
     var name;
     var description;
     for(var i = 0; i < response.length; i++)

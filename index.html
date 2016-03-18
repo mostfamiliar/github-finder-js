@@ -2,19 +2,28 @@
 <html>
   <head>
     <link rel="stylesheet" href="build/css/vendor.css">
+    <link rel="stylesheet" href="build/css/styles.css">
     <script src="build/js/vendor.min.js"></script>
     <script type="text/javascript" src="build/js/app.js"></script>
     <title></title>
   </head>
   <body>
-    <h1>Git user finder</h1>
     <div class="container">
+      <div class="jumbotron">
+          <h1>Git user finder</h1>
+      </div>
       <form id = "userForm">
         <label for="username">Enter git username</label>
         <input id="userName" type="text">
         <button id="formButton" type="submit" class="btn btn-info">Go!</button>
       </form>
       <div id="gitRepos"></div>
+      <nav>
+    <ul class="pager">
+      <li class="previous"><a href="#">Previous</a></li>
+      <li class="next"><a href="#">Next</a></li>
+    </ul>
+    </nav>
     </div>
   </body>
 </html>
