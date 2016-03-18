@@ -5,7 +5,6 @@ exports.getRepos = function(user, page){
     $("#gitRepos").empty();
     for(var i = 0; i < response.length; i++)
     {
-
       var name;
       var description;
       name = response[i].name;
@@ -20,6 +19,7 @@ exports.getRepos = function(user, page){
     }
 
   }).fail(function(error){
+    $("#gitRepos").append('Api error: ' + error.responseJSON.message)
     console.log(error.responseJSON.message);
   });
 };
