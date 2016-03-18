@@ -21,6 +21,6 @@ exports.getRepos = function(user, page){
     }
 
   }).fail(function(error){
-    $("#gitRepos").append('Api error: ' + error.responseJSON.message)
+    $("#gitRepos").append(error.responseJSON.message)
   });
 };

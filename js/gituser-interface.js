@@ -8,6 +8,7 @@ $(document).ready(function(){
   $(".forward").addClass("disabled");
   $("#formButton").click(function(event) {
     userName = $("input#userName").val();
+    
     pageNum = 1;
     getRepos(userName, 1);
     $(".forward").removeClass("disabled");
