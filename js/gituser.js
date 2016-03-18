@@ -8,18 +8,16 @@ exports.getRepos = function(user, page){
       var name;
       var description;
       name = response[i].name;
-            console.log(name);
       if (response[i].description != "") {
       description = response[i].description
       } else {
       description = "No description provided";
       }
 
-      $("#gitRepos").append("<ul><li><strong>" + name + '</strong></li><ul><li>' + description + '</li></ul></ul>');
+      $("#gitRepos").append("<ul><li class='name'><strong>" + name + '</strong></li><ul><li>' + description + '</li></ul></ul>');
     }
 
   }).fail(function(error){
     $("#gitRepos").append('Api error: ' + error.responseJSON.message)
-    console.log(error.responseJSON.message);
   });
 };

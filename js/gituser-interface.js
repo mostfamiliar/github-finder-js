@@ -4,28 +4,29 @@ var getRepos = require("./../js/gituser.js").getRepos;
 $(document).ready(function(){
   var userName;
   var pageNum;
-  $(".previous").addClass("disabled");
-  $(".next").addClass("disabled");
+  $(".back").addClass("disabled");
+  $(".forward").addClass("disabled");
   $("#formButton").click(function(event) {
     userName = $("input#userName").val();
     pageNum = 1;
     getRepos(userName, 1);
-    $(".next").removeClass("disabled");
+    $(".forward").removeClass("disabled");
+    $("h2").html("Git repos!");
    event.preventDefault();
   });
 
-  $(".next").click(function(event) {
+  $(".forward").click(function(event) {
     pageNum = pageNum + 1;
     getRepos(userName, pageNum);
-    $(".previous").removeClass("disabled");
+    $(".back").removeClass("disabled");
   });
 
-  $(".previous").click(function(event) {
+  $(".back").click(function(event) {
     if (pageNum > 1) {
     pageNum = pageNum - 1;
     getRepos(userName, pageNum);
     } else {
-      $(".previous").addClass("disabled");
+      $(".back").addClass("disabled");
     }
 
   });
