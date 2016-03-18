@@ -8,6 +8,7 @@ var del = require('del');
 var buildProduction = utilities.env.production;
 var jshint = require('gulp-jshint');
 var sass = require('gulp-sass');
+var moment = require('moment');
 var sourcemaps = require('gulp-sourcemaps');
 var lib = require('bower-files')({
   "overrides":{
